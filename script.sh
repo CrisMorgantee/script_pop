@@ -4,11 +4,11 @@ set -e
 # Goal: Script which automatically sets up a new Pop Os Machine after installation
 
 # Test to see if user is running with root privileges.
-if [[ "${UID}" -ne 0 ]]
-then
- echo 'Deve ser executado com sudo ou como usuário root' >&2
- exit 1
-fi
+#if [[ "${UID}" -ne 0 ]]
+#then
+# echo 'Deve ser executado com sudo ou como usuário root' >&2
+# exit 1
+#fi
 
 # Ensure system is up to date
 echo '
@@ -32,7 +32,7 @@ echo '
  *** Instalando novos pacotes... ***
 ==============================================================
  '
-sudo apt install -fy openssh-server unattended-upgrades fail2ban software-properties-common apt-transport-https vim curl git git-lfs zsh konsole tmux neofetch traceroute speedtest-cli code cairo-dock cairo-dock-plug-ins vlc gparted gnome-tweak-tool nautilus-admin fonts-firacode ttf-mscorefonts-installer ffmpeg obs-studio libavcodec-extra libdvd-pkg
+sudo apt install -fy openssh-server unattended-upgrades fail2ban software-properties-common apt-transport-https vim curl git git-lfs zsh konsole tmux neofetch traceroute speedtest-cli code cairo-dock cairo-dock-plug-ins vlc gparted gnome-tweak-tool nautilus-admin fonts-firacode ffmpeg obs-studio libavcodec-extra libdvd-pkg
 
 # Enable Firewall
 echo '
