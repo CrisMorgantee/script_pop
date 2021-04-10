@@ -32,7 +32,7 @@ echo '
  *** Instalando novos pacotes... ***
 ==============================================================
  '
-sudo apt install -fy openssh-server unattended-upgrades fail2ban software-properties-common apt-transport-https vim curl git git-lfs zsh konsole tmux neofetch traceroute speedtest-cli code cairo-dock cairo-dock-plug-ins vlc gparted gnome-tweak-tool nautilus-admin fonts-firacode ffmpeg obs-studio libavcodec-extra libdvd-pkg
+sudo apt install -fy openssh-server unattended-upgrades fail2ban software-properties-common apt-transport-https vim curl git git-lfs zsh konsole tmux neofetch traceroute speedtest-cli code cairo-dock cairo-dock-plug-ins vlc gparted gnome-tweak-tool nautilus-admin fonts-firacode ffmpeg obs-studio libavcodec-extra
 
 # Enable Firewall
 echo '
@@ -331,6 +331,11 @@ fi
 # Cleanup
 sudo apt autoremove
 sudo apt clean 
+
+echo ' run 
+ `sudo apt install -y libdvd-pkg`
+  `sudo apt install -y ttf-mscorefonts-installer`  
+'
 
 exit 0
 
